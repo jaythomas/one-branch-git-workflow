@@ -13,7 +13,6 @@ What if all this reduced the amount of steps in the CI pipeline as well?
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Features
 
 1. Git version tagging must be used to reference all commits that are release candidates. Git works very different than mercurial and SVN in this way. A branch can contain a release and simultaneously contain commits not in that release. This makes the need for maintaining multiple branches redundant, which leads to feature 2.
@@ -94,7 +93,7 @@ git checkout staging
 echo "my file fixes" > README.md  # Make the fix
 
 # Fix it within staging. master and staging have diverged.
-git add . && git commit -am "Fix README"
+git commit -am "Fix README"
 git tag v2.0.0-rc1
 
 # ...Everything looks good. Cut a release
@@ -130,7 +129,7 @@ commit 8cbf6f6af52391d90a3be708cd64f8dd5514b600 (tag: v2.0.0-rc1, tag: v2.0.0)
 Author: Jay Thomas <jay@gfax.ch>
 Date:   Mon Nov 25 16:20:31 2019 -0500
 
-    Fix file A
+    Fix README
 
 commit dad9b824a9d070637d975853d5d4ea785585cba3 (tag: v2.0.0-rc0)
 Author: Jay Thomas <jay@gfax.ch>
@@ -152,7 +151,7 @@ commit 8cbf6f6af52391d90a3be708cd64f8dd5514b600 (tag: v2.0.0-rc1, tag: v2.0.0)
 Author: Jay Thomas <jay@gfax.ch>
 Date:   Mon Nov 25 16:20:31 2019 -0500
 
-    Fix file A
+    Fix README
 
 commit dad9b824a9d070637d975853d5d4ea785585cba3 (tag: v2.0.0-rc0)
 Author: Jay2 Thomas <jay2@gfax.ch>
